@@ -31,8 +31,6 @@ if user_input and button:
 
     # Softmax for probabilities
     probs = torch.softmax(output.logits, dim=-1).detach().numpy()
-    # Appearing the probs
-    st.write(f'Probs: {probs[0][0]:.2f} | {probs[0][1]:.2f}')
 
     # Prediction: Find the class with the highest probability
     y_pred = np.argmax(probs, axis=1)
